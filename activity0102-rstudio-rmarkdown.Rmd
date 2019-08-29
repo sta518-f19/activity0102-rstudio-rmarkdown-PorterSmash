@@ -47,17 +47,17 @@ dino_data %>%
 First let's plot the data.
 
 ```{r plot-star}
-dino_data <- datasaurus_dozen %>%
+star_data <- datasaurus_dozen %>%
   filter(dataset == "star")
 
-ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
 And next calculate the correlation between `x` and `y` in the dataset.
 
 ```{r cor-star}
-dino_data %>%
+star_data %>%
   summarize(r = cor(x, y))
 ```
 
@@ -66,16 +66,16 @@ dino_data %>%
 First we plot the points.
 
 ```{r plot-circle}
-dino_data <- datasaurus_dozen %>%
+circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 
-ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
 Then we calculate the correlation.
 ```{r cor-circle}
-dino_data %>%
+circle_data %>%
   summarize(r = cor(x, y))
 ```
 
