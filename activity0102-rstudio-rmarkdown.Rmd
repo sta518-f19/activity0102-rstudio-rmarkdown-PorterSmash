@@ -2,7 +2,12 @@
 title: "Activity 1.2 - RStudio and R Markdown"
 author: "Alex Porter"
 date: "8/29/2019"
-output: html_document
+output: 
+  html_document: 
+    fig_height: 5.7142857
+    fig_width: 8
+    highlight: kate
+    theme: flatly
 ---
 
 ### Load packages
@@ -38,7 +43,6 @@ dino_data %>%
 
 ### Exercise 3
 
-(Add code and narrative as needed. Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient. To finish, clean up the narrative by removing these instructions.)
 
 First let's plot the data.
 
@@ -86,6 +90,9 @@ ggplot(data = datasaurus_dozen, aes(x = x, y = y, color = dataset)) +
   facet_wrap(~ dataset, ncol = 3) +
   theme(legend.position = "none")
 ```
+
+
+
 Now let's calculate all the `r` values using `group_by`.
 ```{r cor-all}
 datasaurus_dozen %>%
